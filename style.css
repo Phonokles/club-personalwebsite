@@ -60,3 +60,11 @@ h2{
 }
 .project a:hover img {transform: rotate(-1deg)scale(1.05);}
 
+@media (max-width: 650px) {
+    heder { 
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .projects { grid-template-columns: 1fr;}
+}
