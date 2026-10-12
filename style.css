@@ -3,8 +3,15 @@
     margin: 0;
     padding: 0;
 }
+html {
+    /* pink kommt von oben rechts und verlaeuft nach links ins weiss */
+    background:
+        radial-gradient(ellipse 160% 140% at 100% 0%, rgba(255, 195, 218, .8), rgba(255, 205, 225, .45) 30%, rgba(255, 215, 230, .18) 55%, rgba(255, 225, 235, 0) 82%) no-repeat,
+        #fff;
+    min-height: 100%;
+}
 body{
-    background: #fff;
+    background: transparent;
     color: #000;
     font-family: 'Caveat', cursive;
     font-size: 26px;
@@ -14,6 +21,19 @@ body{
 }
 a {
     color: #000;
+}
+.gh {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 18px;
+    border: 3px solid #000;
+    border-radius: 12px;
+    text-decoration: none;
+    background: #fff;
+    transition: transform .15s;
+}
+.gh:hover {
+    transform: rotate(-1deg);
 }
 header {
     display: flex;
@@ -46,6 +66,21 @@ h2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+}
+.project {
+    position: relative;
+}
+/* leichtes pink hinter den projekten, unten links */
+.project::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 70%;
+    height: 80%;
+    background: radial-gradient(ellipse at 0% 100%, rgba(255, 175, 205, .4), rgba(255, 175, 205, 0) 70%);
+    filter: blur(20px);
+    z-index: -1;
 }
 .project img {
     width: 100%;
