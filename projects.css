@@ -1,21 +1,38 @@
+body {
+    max-width: 1300px;
+}
+h2 {
+    text-align: center;
+    font-size: 52px;
+    margin: 10px 0 30px;
+}
 .projects {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
-.col{
+.col {
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 0 30px;
 }
-.col:first-child{
+.col:first-child {
     padding-left: 0;
 }
-.col + .col{
+.col.software {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    align-content: start;
+}
+.col.software h3 {
+    grid-column: 1 / -1;
+}
+.col + .col {
     border-left: 3px solid #000;
     padding-right: 0;
 }
-.col h3{
+.col h3 {
     font-size: 38px;
     margin-bottom: -15px;
 }
@@ -33,7 +50,7 @@
     filter: blur(20px);
     z-index: -1;
 }
-.project .name{
+.project .name {
     font-size: 28px;
     margin-bottom: 4px;
 }
@@ -42,19 +59,15 @@
     border: 3px solid #000;
     border-radius: 12px;
     display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #fff;
     transition: transform .15s;
 }
-.project h3 { 
-    font-size: 38px; 
-    margin-bottom: 10ox; 
+.project a:hover img {
+    transform: rotate(-1deg) scale(1.05);
 }
-.project a:hover img {transform: rotate(-1deg)scale(1.05);}
 
-h2{
-    text-align: center;
-    font-size: 52px;
-    margin: 60px 0 30px;
-}
 @media (max-width: 650px) {
     .projects {
         grid-template-columns: 1fr;
@@ -62,6 +75,11 @@ h2{
     .col, .col:first-child {
         padding: 0;
     }
+    .col.software {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    /* aufm handy liegt die linie quer */
     .col + .col {
         border-left: none;
         border-top: 3px solid #000;

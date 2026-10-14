@@ -1,0 +1,33 @@
+h2 {
+    text-align: center;
+    font-size: 52px;
+    margin: 10px 0 40px;
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 20px;
+    border: 3px solid #000;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 34px;
+    text-decoration: none;
+    transition: transform .15s;
+}
+.contact-btn:hover {
+    transform: rotate(-1deg) scale(1.03);
+}
+.contact-btn img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
