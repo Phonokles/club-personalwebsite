@@ -5,7 +5,7 @@
 }
 html {
     background:
-        radial-gradient(ellipse 160% 140% at 100% 0%, rgba(255, 195, 218, .8), rgba(255, 205, 225, .45) 30%, rgba(255, 215, 230, .18) 55%, rgba(255, 225, 235, 0) 82%) no-repeat,
+    radial-gradient(ellipse 160% 140% at 100% 0%, rgba(255, 195, 218, .8), rgba(255, 205, 225, .45) 30%, rgba(255, 215, 230, .18) 55%, rgba(255, 225, 235, 0) 82%) no-repeat,
         #fff;
     min-height: 100%;
 }
@@ -20,7 +20,20 @@ body {
 }
 a {
     color: #000;
+}body::before {
+    content: "";
+    position: fixed;
+    top: -10px;
+    right: -10px;
+    width: clamp(320px, 52vw, 840px);
+    aspect-ratio: 264 / 275;
+    background: url(assets/tree.png) no-repeat top right / contain;
+    filter: blur(3px);
+    opacity: .9;
+    pointer-events: none;
+    z-index: 50;
 }
+
 
 .sidebar {
     position: fixed;
