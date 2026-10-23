@@ -4,10 +4,8 @@
     padding: 0;
 }
 html {
-    background:
-    radial-gradient(ellipse 160% 140% at 100% 0%, rgba(255, 195, 218, .8), rgba(255, 205, 225, .45) 30%, rgba(255, 215, 230, .18) 55%, rgba(255, 225, 235, 0) 82%) no-repeat,
-        #fff;
     min-height: 100%;
+    background: #7fb6f5 url(assets/background.png) center / cover no-repeat fixed;
 }
 body {
     background: transparent;
@@ -44,7 +42,10 @@ a {
     flex-direction: column;
     gap: 14px;
     padding: 14px;
-    background: #fff;
+    background: rgba(255, 255, 255, .35);
+    backdrop-filter: blur(10px) saturate(1.4);
+    -webkit-backdrop-filter: blur(10px) saturate(1.4);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, .7);
     border: 3px solid #000;
     border-radius: 18px;
     z-index: 10;
@@ -55,7 +56,10 @@ a {
     height: 72px;
     border: 3px solid #000;
     border-radius: 12px;
-    background: #fff;
+    background: rgba(255, 255, 255, .35);
+    backdrop-filter: blur(10px) saturate(1.4);
+    -webkit-backdrop-filter: blur(10px) saturate(1.4);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, .7);
     overflow: hidden;
     font-size: 16px;
     line-height: 1;
@@ -68,6 +72,7 @@ a {
     height: 100%;
     object-fit: contain;
     display: block;
+    opacity: .7;
 }
 .nav-btn:hover {
     transform: rotate(-3deg)scale(1.1);

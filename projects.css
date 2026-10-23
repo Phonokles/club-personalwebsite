@@ -63,6 +63,7 @@ h2 {
     object-fit: contain;
     background: #fff;
     transition: transform .15s;
+    opacity: .7
 }
 .project a:hover img {
     transform: rotate(-1deg) scale(1.05);
