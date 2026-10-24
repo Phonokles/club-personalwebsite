@@ -6,7 +6,7 @@
         <title>about me</title>
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="aboutme.css"
+        <link rel="stylesheet" href="aboutme.css">
         <link rel="icon" href="assets/senku.png">
     </head>
     <body>
@@ -18,23 +18,65 @@
     
         <header>
             <img class="pfp" src="assets/senku.png" alt="[+_+]">
-            <div class="about me">
+            <div class="about">
                 <h1>Hi, i am Phonemi ???</h1>
                 <p>the club leader of the rustsekte and i build hardware and software projects.</p>
                 <p>student dev from bavaria, everything i make is open source.</p>
                 <p><a class="gh" href="https://github.com/Phonokles">my-github ;)</a></p>
             </div>
-            <div class="hobby">
-                <h1> hobby's</h1>
-                <ul>
-                    <li>Prgogramming</li>
-                    <li>building hardware</li>
-                    <li>Physiks</li>
-                    <li>badminton</li>
-                    <li>playing</li>
-                <ul>
-            </div>
         </header>
+
+                <div class="below">
+            <div class="hobby box">
+                <h2>hobby's</h2>
+                <ul>
+                    <li data-show="programming">Prgogramming</li>
+                    <li data-show="hardware">building hardware</li>
+                    <li data-show="physics">Physiks</li>
+                    <li data-show="badminton">badminton</li>
+                    <li data-show="music">music</li>
+                </ul>
+            </div>
+            <div class="side box">
+                <div class="panel on" id="now">
+                    <h2>right now</h2>
+                    <p>building game of life only out of logic gates</p>
+                    <p>learning physics for uni</p>
+                    <p>running the rustsekte club</p>
+                </div>
+ 
+                <div class="panel" id="programming">
+                    <h2>my hackatime</h2>
+                    <img class="hackatime" src="assets/hackatime.png" alt="hackatime graph">
+                </div>
+ 
+                <div class="panel" id="hardware">
+                    <h2>hardware</h2>
+                    <p>logic gates are super cool. thats why i am im love with them they are so efficent and cool</p>
+                    <p>right now im building a mask for my character</p>
+                </div>
+ 
+                <div class="panel" id="physics">
+                    <h2>physics</h2>
+                    <canvas class="pendel" width="400" height="170"></canvas>
+                    <p>i didnt know what i suppost to say there so here is a codd pendulum</p>
+                </div>
+ 
+                <div class="panel" id="badminton">
+                    <h2>badminton</h2>
+                    <img class="svu" src="assets/svu.png" alt="SVU">
+                    <p>playing badminton at the SVU</p>
+                </div>
+ 
+                <div class="panel" id="music">
+                    <h2>music</h2>
+                    <h3> these are my 2 favorite songs</h3>
+                    <iframe class="spotify" data-song="https://open.spotify.com/track/50tTFMbM8n9Ztbngn9tV6q?autoplay_ok=1 title="sorry mom"></iframe>
+                    <iframe class="spotify" data-song="https://open.spotify.com/track/02XnQdf7sipaKBBHixz3Zp?autoplay_ok=1" title="paparazzi"></iframe>
+                </div>
+            </div>
+        </div>
+ 
+        <script src="aboutme.js"></script>
     </body>
 </html>
-

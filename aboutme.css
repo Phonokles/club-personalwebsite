@@ -1,10 +1,11 @@
-
 body {
     max-width: none;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 4vh;
     padding: 40px 40px 40px 150px;
 }
 header {
@@ -47,6 +48,82 @@ header p {
     transform: rotate(-1deg);
 }
 
+/* hobbys und die box rechts daneben, unter dem text */
+.below {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3vw;
+    width: 75vw;
+    max-width: 1100px;
+    /* feste hoehe, sonst springt beim hovern die ganze seite */
+    height: clamp(340px, 42vh, 460px);
+}
+.box {
+    padding: 0.5em 1em 0.7em;
+    border: 3px solid #000;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .35);
+    backdrop-filter: blur(10px) saturate(1.4);
+    -webkit-backdrop-filter: blur(10px) saturate(1.4);
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, .7);
+    font-size: clamp(24px, 1.9vw, 38px);
+    overflow: auto;
+}
+.box h2 {
+    font-size: 1.5em;
+    line-height: 1.1;
+    margin-bottom: 0.2em;
+}
+.box ul {
+    padding-left: 1.1em;
+}
+.box li, .box p {
+    line-height: 1.35;
+}
+
+/* die hobbys sind jetzt hoverbar */
+.hobby li {
+    cursor: pointer;
+    width: fit-content;
+    transition: transform .15s;
+}
+.hobby li:hover, .hobby li.active {
+    transform: translateX(6px) rotate(-1deg);
+    text-decoration: underline;
+}
+.panel {
+    display: none;
+}
+.panel.on {
+    display: block;
+    animation: rein .2s ease-out;
+}
+@keyframes rein {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+}
+.hackatime, .svu {
+    display: block;
+    max-width: 100%;
+    max-height: 220px;
+    border-radius: 8px;
+    margin: 0.2em 0 0.3em;
+}
+.pendel {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+.spotify {
+    display: block;
+    width: 100%;
+    height: 80px;
+    border: 0;
+    border-radius: 12px;
+    margin-top: 8px;
+}
+
 @media (max-width: 650px) {
     body {
         display: block;
@@ -58,5 +135,12 @@ header p {
         text-align: center;
         gap: 20px;
         max-width: none;
+    }
+    .below {
+        grid-template-columns: 1fr;
+        width: auto;
+        height: auto;
+        margin-top: 30px;
+        gap: 20px;
     }
 }
