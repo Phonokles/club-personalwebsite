@@ -81,9 +81,8 @@ header p {
     line-height: 1.35;
 }
 
-/* die hobbys sind jetzt hoverbar */
 .hobby li {
-    cursor: pointer;
+    cursor: url("assets/cursor-pointer.png") 6 0, pointer;
     width: fit-content;
     transition: transform .15s;
 }
