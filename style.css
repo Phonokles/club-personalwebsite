@@ -143,3 +143,7 @@ pgswitch-btn:hover{
     border: 0;
     z-index: 60;
 }
+footer{
+    text-align: center;
+    margin-top: 40px;
+}
