@@ -64,5 +64,4 @@ function pendel(now) {
 }
 requestAnimationFrame(pendel);
 
-// reinklicken schubst das pendel an
 canvas.addEventListener('click', () => { speed += 2; });

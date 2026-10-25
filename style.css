@@ -89,6 +89,8 @@ body::before {
     width: 100%;
     box-sizing: border-box;
     padding-bottom:  10px;
+    transition: transform .15s;
+
 }
 .pgswitch-btn button{
     background: rgba(255, 255, 255, .35);
@@ -100,7 +102,9 @@ body::before {
     padding: 12px 28px;
     font-size: 28px;
     cursor: url("assets/cursor-pointer.png") 6 0, pointer;
-
+}
+pgswitch-btn:hover{
+    transform: rotate(3deg)scale(1.1);
 }
 .nav-btn img {
     width: 100%;
