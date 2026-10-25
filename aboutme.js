@@ -1,4 +1,3 @@
-
 const below = document.querySelector('.below');
 const items = document.querySelectorAll('.hobby li');
 const panels = document.querySelectorAll('.panel');
